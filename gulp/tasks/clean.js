@@ -6,7 +6,7 @@
 
 	function clean(appConfig) {
 		return function() {
-			return gulp.src([appConfig.output], {
+			return gulp.src([appConfig.output, appConfig.dist], {
 					read: false
 				})
 				.pipe(rimraf({ force: true }));
