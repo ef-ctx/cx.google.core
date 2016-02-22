@@ -1,0 +1,40 @@
+### OSX ###
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+
+*~
+._*
+*.swp
+.sass-cache/
+.idea/
+/logs/
+tmp/
+tags
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+
+### CTX Boilerplate ###
+
+# Npm & Bower modules
+/node_modules/
+/vendor/
+
+# builds and test related
+/build/
+/dist/
+/coverage/
+test-results.xml
+
+# example
+/example/cx
+/example/google
+
+# schema hardlinks
+*.schema
+
+*.sublime-workspace
