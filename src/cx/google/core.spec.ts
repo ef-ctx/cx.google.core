@@ -1,6 +1,6 @@
 /// <reference path="../../../typings/tsd.d.ts" />
 
-import {Auth, Client} from './core';
+import {Auth, Client} from 'cx/google/core';
 
 export function main() {
   describe('Core', function() {

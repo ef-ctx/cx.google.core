@@ -1,6 +1,6 @@
 /// <reference path="../../../typings/tsd.d.ts" />
 
-import {Client} from './client';
+import {Client} from 'cx/google/client';
 /**
 	For some damned reason we need to get the 'profile' scope as well.
 	If we don't we get "random" error after `signIn`.
