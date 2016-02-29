@@ -106,7 +106,7 @@ angular.module('myApp', [
     }
   }
 ])
-
+```
 
 ## Contributing
 
