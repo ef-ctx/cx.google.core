@@ -84,11 +84,11 @@ angular.module('myApp', [
 ])
 
 .controller('MainCtrl', [
-  'Auth',
-  function (Auth) {
+  'google',
+  function (google) {
     'use strict';
     // Read here how to create your clientId https://developers.google.com/drive/v3/web/quickstart/js
-    var _auth = new Auth('YOUR_CLIENT_ID');
+    var _auth = new google.Auth('YOUR_CLIENT_ID');
 
     _auth.checkAuth()
       .then(loggedIn)
