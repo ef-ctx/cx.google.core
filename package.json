@@ -37,5 +37,12 @@
     "phantomjs": "^1.9.19",
     "systemjs-builder": "^0.15.0",
     "typescript": "^1.7.5"
+  },
+  "typescript": {
+      "definitions": [
+          "cx/google/auth.d.ts",
+          "cx/google/client.d.ts",
+          "cx/google/core.d.ts"
+      ]
   }
 }
