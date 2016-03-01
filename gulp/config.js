@@ -9,15 +9,18 @@ var config = {
 		]
 	},
 	'src': {
-		'ts': [
-      'src/*.ts',
-			'src/**/*.ts',
-		],
-    'distTs': [
+		'distTs': [
       'src/*.ts',
       'src/**/*.ts',
       '!src/**/*.spec.ts',
       '!src/mocks/*.ts',
+    ],
+    'distTypings': [
+      'src/cx/google/*.d.ts'
+    ],
+    'ts': [
+      'src/*.ts',
+      'src/**/*.ts',
     ],
     'typings': [
       'typings/tsd.d.ts'
@@ -26,9 +29,7 @@ var config = {
 	'typescript': {
 		'inputPath': 'cx/google/core',
 		'systemConfig': 'src/system.config.js',
-		'tsconfig': './src/tsconfig.json',
-		'tsconfigDist': 'src/tsconfig.dist.json',
-    'tsconfigExample': 'src/tsconfig.example.json'
+		'tsconfig': './src/tsconfig.json'
 	},
 	'test': {
     'mocks': [

@@ -6,7 +6,7 @@
 
 	function buildTypescript(appConfig) {
     return function () {
-      var tsProject = ts.createProject(appConfig.typescript.tsconfigDist),
+      var tsProject = ts.createProject(appConfig.typescript.tsconfig),
         files = appConfig.src.ts.concat(appConfig.src.typings),
         result = gulp.src(files).pipe(ts(tsProject.options));
 
