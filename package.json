@@ -1,6 +1,6 @@
 {
   "name": "cx.google.core",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "google client/auth api wrapper written in typescript",
   "license": {
     "type": "MIT",
@@ -39,10 +39,10 @@
     "typescript": "^1.7.5"
   },
   "typescript": {
-      "definitions": [
-          "cx/google/auth.d.ts",
-          "cx/google/client.d.ts",
-          "cx/google/core.d.ts"
-      ]
+    "definitions": [
+      "cx/google/auth.d.ts",
+      "cx/google/client.d.ts",
+      "cx/google/core.d.ts"
+    ]
   }
 }
