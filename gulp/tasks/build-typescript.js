@@ -5,13 +5,13 @@
 	 ts = require('gulp-typescript');
 
 	function buildTypescript(appConfig) {
+    return function () {
+      var tsProject = ts.createProject(appConfig.typescript.tsconfigDist),
+        files = appConfig.src.ts.concat(appConfig.src.typings),
+        result = gulp.src(files).pipe(ts(tsProject.options));
 
-		return function () {
-			var tsProject = ts.createProject(appConfig.typescript.tsconfig),
-        result = tsProject.src().pipe(ts(tsProject));
-
-			return result.js.pipe(gulp.dest(appConfig.output))
-		};
+      return result.js.pipe(gulp.dest(appConfig.output));
+    }
 	};
 
 	exports.task = buildTypescript;

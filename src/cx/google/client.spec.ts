@@ -1,5 +1,3 @@
-/// <reference path="../../../typings/tsd.d.ts" />
-
 import {Client} from 'cx/google/client';
 import {gapi} from 'mocks/test.mocks';
 

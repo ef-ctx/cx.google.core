@@ -1,7 +1,6 @@
 var config = {
 	'dist': 'dist/',
 	'output': 'build/',
-	'example': 'example/',
 	'vendor': {
 		'js': [
 			'node_modules/systemjs/dist/system-polyfills.src.js',
@@ -11,14 +10,23 @@ var config = {
 	},
 	'src': {
 		'ts': [
-			'src/*.ts',
-			'src/**/*.ts'
-		]
+      'src/*.ts',
+			'src/**/*.ts',
+		],
+    'distTs': [
+      'src/*.ts',
+      'src/**/*.ts',
+      '!src/**/*.spec.ts',
+      '!src/mocks/*.ts',
+    ],
+    'typings': [
+      'typings/tsd.d.ts'
+    ]
 	},
 	'typescript': {
 		'inputPath': 'cx/google/core',
 		'systemConfig': 'src/system.config.js',
-		'tsconfig': 'src/tsconfig.json',
+		'tsconfig': './src/tsconfig.json',
 		'tsconfigDist': 'src/tsconfig.dist.json',
     'tsconfigExample': 'src/tsconfig.example.json'
 	},

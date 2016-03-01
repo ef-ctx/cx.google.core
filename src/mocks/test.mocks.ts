@@ -1,5 +1,3 @@
-/// <reference path='../../typings/tsd.d.ts' />
-
 export declare var gapi: any;
 
 export var MOCK_FILE = {
