@@ -73,6 +73,6 @@ export class Auth {
   }
 
   private _wait(fn:any) {
-    Client.bootstrap().then(fn);
+    Client.load().then(fn);
   }
 }

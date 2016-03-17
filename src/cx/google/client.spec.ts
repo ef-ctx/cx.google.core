@@ -2,8 +2,8 @@ import {Client} from 'cx/google/client';
 import {gapi} from 'mocks/test.mocks';
 
 class ClientMock extends Client {
-	static _add_script_tag(resolve, reject, preload_api) {
-		this._api_has_loaded(resolve, reject, preload_api);
+	static _add_script_tag(resolve, reject) {
+    resolve();
 	}
 }
 
@@ -17,7 +17,7 @@ export function main() {
     it('should add api script tag and resolve promise', function (done) {
       var success = false;
 
-      ClientMock.bootstrap().then(function() {
+      ClientMock.load().then(function() {
 				success = true;
 				expect(success).toBe(true);
 				done();
@@ -27,7 +27,7 @@ export function main() {
     it('should load api with name and version', function(done) {
       var success = false;
 
-      ClientMock.bootstrap().then(function() {
+      ClientMock.load().then(function() {
 				ClientMock.load('drive', 'v3').then(function() {
 					expect(gapi.client.load).toHaveBeenCalled();
 					done();
@@ -38,20 +38,10 @@ export function main() {
     it('should pre load api with name and version', function(done) {
       var success = false;
 
-			ClientMock.bootstrap('drive').then(function() {
+			ClientMock.load('drive').then(function() {
 				expect(gapi.client.load).toHaveBeenCalled();
 				done();
 			});
-    });
-
-    it('should reject load if api hasnt loaded', function(done) {
-			var success = false;
-
-      Client._script_loaded = false;
-			ClientMock.load('drive', 'v3').catch(function(reason) {
-				expect(reason).toBe('Google Apis has not been loaded');
-				done();
-			})
     });
 	});
 }

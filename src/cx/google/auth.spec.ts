@@ -10,7 +10,7 @@ export function main() {
         spyOn(gapi.auth2, 'init').and.callThrough();
 
         Client._add_script_tag = function(resolve, reject) {
-					this._api_has_loaded(resolve, reject);
+            resolve();
 				}
     });
 
@@ -18,7 +18,7 @@ export function main() {
       var scopes = ['scope1'];
       var client = new Auth(CLIENT_ID, scopes);
 
-      Client.bootstrap().then(() => {
+      Client.load().then(() => {
 				expect(client.clientId).toBe(CLIENT_ID);
 	      expect(client.scopes).toBe(scopes);
 	      expect(gapi.auth2.init).toHaveBeenCalled();
