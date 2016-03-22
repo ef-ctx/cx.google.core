@@ -9,7 +9,6 @@
 			return gulp.src('./package.json')
                 .pipe(jeditor(function(json) {
                     json.typings = 'index.d.ts';
-                    console.log(json);
                     return json;
                 }))
                 .pipe(gulp.dest(appConfig.dist));
