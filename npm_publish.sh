@@ -38,7 +38,6 @@ gulp dist-package-json
 
 npm version $NPM_BUMP -m "chore(release): %s"
 
-cp package.json $NPM_DIR
 cp README.md $NPM_DIR
 
 npm publish $NPM_DIR
