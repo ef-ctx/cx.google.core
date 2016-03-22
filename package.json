@@ -18,6 +18,7 @@
   },
   "keywords": [],
   "author": "",
+  "typings": "./cx/google/core.d.ts",
   "dependencies": {
     "systemjs": "0.19.2"
   },
