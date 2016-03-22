@@ -10,21 +10,19 @@ var config = {
 	},
 	'src': {
 		'distTs': [
-      'src/*.ts',
-      'src/**/*.ts',
-      '!src/**/*.spec.ts',
-      '!src/mocks/*.ts',
-    ],
-    'distTypings': [
-      'src/cx/google/*.d.ts'
-    ],
-    'ts': [
-      'src/*.ts',
-      'src/**/*.ts',
-    ],
-    'typings': [
-      'typings/tsd.d.ts'
-    ]
+	      'src/*.ts',
+	      'src/**/*.ts',
+	      '!src/**/*.spec.ts',
+	      '!src/mocks/*.ts',
+	    ],
+	    'ts': [
+	      'src/*.ts',
+	      'src/**/*.ts',
+	    ],
+	    'typings': [
+	      'typings/browser.d.ts',
+		  'google.external.d.ts'
+	    ]
 	},
 	'typescript': {
 		'inputPath': 'cx/google/core',
@@ -32,9 +30,9 @@ var config = {
 		'tsconfig': './src/tsconfig.json'
 	},
 	'test': {
-    'mocks': [
-      'mocks/*.ts'
-    ],
+	    'mocks': [
+	      'mocks/*.ts'
+	    ],
 		'js': [
 			{
 				pattern: 'build/**/*.js',

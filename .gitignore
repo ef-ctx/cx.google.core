@@ -27,6 +27,7 @@ tags
 # builds and test related
 /build/
 /dist/
+/typings/
 /coverage/
 test-results.xml
 

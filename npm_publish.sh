@@ -34,6 +34,7 @@ fi
 
 rm -fr $NPM_DIR
 gulp dist
+gulp dist-package-json
 
 npm version $NPM_BUMP -m "chore(release): %s"
 
