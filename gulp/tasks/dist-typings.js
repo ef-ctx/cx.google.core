@@ -11,7 +11,7 @@
         return merge([
           gulp.src(appConfig.dist + 'browser.d.ts')
             .pipe(rename({
-                'basename': 'index'
+                'basename': 'index.d'
             }))
             .pipe(gulp.dest(appConfig.dist)),
           gulp.src([appConfig.dist + 'browser.d.ts', appConfig.dist + 'main.d.ts'])
