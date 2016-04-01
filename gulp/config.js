@@ -27,7 +27,8 @@ var config = {
 	'typescript': {
 		'inputPath': 'cx/google/core',
 		'systemConfig': 'src/system.config.js',
-		'tsconfig': './src/tsconfig.json'
+		'tsconfig': './src/tsconfig.json',
+		'declaration': './src/cx/google/core.d.ts'
 	},
 	'test': {
 	    'mocks': [

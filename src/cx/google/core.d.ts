@@ -1,5 +1,5 @@
 declare module 'cx/google/core' {
-  class Client {
+  export class Client {
     static _script_loaded: boolean;
     static _api_load_promise: Promise<any>;
     static bootstrap(preload_api?: string): Promise<any>;
@@ -8,7 +8,7 @@ declare module 'cx/google/core' {
     static _api_has_loaded(resolve: any, reject: any, preload_api: string): void;
   }
 
-  class Auth {
+  export class Auth {
     scopes: Array<string>;
     clientId: string;
     private _googleAuth;
